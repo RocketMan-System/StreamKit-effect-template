@@ -7,13 +7,10 @@
     "author": "RocketMan",
     "version": "1.0.0",
     "type": "effect",
-    "htmlEntry": "index.html",
     "permissions": ["effectData"],
     "settings": {
         "maxSeconds": 120,
-        "defaultVolume": 70,
-        "defaultSeconds": 30,
-        "default_showSeconds": 8,
-        "default_volumeBeep": 45
+        "volume": 70,
+        "defaultSeconds": 30
     }
 }

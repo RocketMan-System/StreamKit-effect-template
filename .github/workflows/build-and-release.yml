@@ -65,6 +65,12 @@ jobs:
         with:
           tag_name: v${{ steps.get_version.outputs.version }}
           name: Release v${{ steps.get_version.outputs.version }}
+          body: |
+            This extension can be installed using the following link:
+
+            streamkit://extensions/download/${{ github.repository }}
+
+            You can also install it from the application settings under the **Assets Manager** section by specifying the **Public ID**: `${{ github.repository }}`.
           files: |
             main.zip
             manifest.json
