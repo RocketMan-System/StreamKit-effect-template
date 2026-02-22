@@ -1,7 +1,9 @@
 import React from "react";
 import "./styles/index.less";
-import { ApiRequest } from "./modules/api";
-import { triggerId } from "./modules/token";
+import {
+	ApiRequest,
+	TRIGGER_ID,
+} from "@rocketman-system/streamkit-widget-helper";
 
 const battaryIcon = require("./media/battary.svg").default;
 
@@ -29,12 +31,12 @@ export const App = React.memo(() => {
 	}>();
 
 	React.useEffect(() => {
-		ApiRequest("GET", "private/effect/loadData", { triggerId: triggerId }).then(
-			(data) => {
-				setData(data);
-				setLoaded(true);
-			},
-		);
+		ApiRequest("GET", "private/effect/loadData", {
+			triggerId: TRIGGER_ID,
+		}).then((data) => {
+			setData(data);
+			setLoaded(true);
+		});
 	}, []);
 
 	React.useEffect(() => {

@@ -39,6 +39,7 @@
     "webpack-cli": "^6.0.1"
   },
   "dependencies": {
+    "@rocketman-system/streamkit-widget-helper": "^1.0.2",
     "@xxanderwp/jstoolkit": "^1.0.1",
     "axios": "^1.13.5",
     "react": "^19.2.4",
